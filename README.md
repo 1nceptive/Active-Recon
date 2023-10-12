@@ -5,7 +5,6 @@
 
 - <b>Identify Open Ports on target systems</b>
 - <b>Analyse internal infrastructure of a organisation/network</b>
-- <b>Identify email addresses and social media presence links</b>
   
 
 <h2>Websites & Tools used</h2>
@@ -24,13 +23,15 @@
 
 <h2>Cheatsheet Walkthrough</h2>
 
+
+ We will find some more subdomains, DNS info but this time with active recon tools.
 1. ***TERMINAL***
    **Automatic Zone Transfer to enumerate DNS records and subdomains:**
-   - Using `dnsenum`:
+   - Using `dnsenum`: dnsenum runs everything without control/ performs automatic zonetransfer.
      ```
      dnsenum zonetransfer.me
      ```
-   - Alternatively using `dig`:
+   - Alternatively using `dig`: more controlled unlike dnsenum/ axfr is tag for zonetransfer/ @nsztm1.digi.ninja is a DNS Server
      ```
      dig axfr @nsztm1.digi.ninja zonetransfer.me
      ```
