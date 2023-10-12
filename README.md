@@ -11,12 +11,11 @@
 <h2>Websites & Tools used</h2>
 <b>Mentioned in Order</b>
 
-- <b>netcraft.com</b> 
-- <b>dnsdumpster.com</b>
-- <b>wafw00f</b>
-- <b>sublist3r</b>
-- <b>theHarvester</b>
-- <b>haveibeenpwned.com</b>
+- <b>dnsenum</b> 
+- <b>dig</b>
+- <b>fierce</b>
+- <b>nmap</b>
+- <b>netdiscover</b>
 
 <h2>Environments Used </h2>
 
