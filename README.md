@@ -3,6 +3,7 @@
 
 <h2>Key Outcomes Required</h2>
 
+- <b>Active DNS Recon</b>
 - <b>Identify Open Ports on target systems</b>
 - <b>Analyse internal infrastructure of a organisation/network</b>
   
@@ -21,13 +22,29 @@
 
 - <b>Kali Linux</b> 
 
+<h2>Common Record Types</h2>
+
+```
+DNS RECORDS
+A - hostname or domain IPv4 Address
+AAAA - hostname or domain IPv6 Address
+NS - Domains Nameserver
+MX - mail server
+CNAME - domain aliases
+TXT - text record
+HINFO - host information
+SOA - domain authority
+SRV - service records
+PTR - hostname
+```
+
 <h2>Cheatsheet Walkthrough</h2>
 
 
- We will find some more subdomains, DNS info but this time with active recon tools.
+ We will do some Active DNS enum first. Note: Zone Transfer must be enabled on one of the servers.
 1. ***TERMINAL***
    **Automatic Zone Transfer to enumerate DNS records and subdomains:**
-   - Using `dnsenum`: dnsenum runs everything without control/ performs automatic zonetransfer.
+   - Using `dnsenum`: dnsenum runs everything without control/ performs automatic zonetransfer, bruteforce.
      ```
      dnsenum zonetransfer.me
      ```
@@ -55,7 +72,7 @@ ASSUMING YOU HAVE GAINED ACCESS TO INTERNAL NETWORK
      ```
      sudo nmap -sn 192.168.2.0/24
      ```
-   - Alternatively, using `netdiscover`:
+   - Alternatively, using `netdiscover`: More aesthetic and uses different protocol
      ```
      sudo apt-get install netdiscover -y
      sudo netdiscover -i eth0 -r 192.168.2.0/24
@@ -90,7 +107,14 @@ ASSUMING YOU HAVE GAINED ACCESS TO INTERNAL NETWORK
      - `-v`: Shows output while scanning
 
    **Output Nmap scan results into a file:**
-
+   - Normal text.txt file:
+     ```
+     nmap -Pn -F -sV 0.0.0.0 -oN text.txt
+     ```
+   - Metasploit friendly file text.xml:
+     ```
+     nmap -Pn -F -sV 0.0.0.0 -oN text.xml
+     ```
 
 
 
