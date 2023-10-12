@@ -24,37 +24,6 @@
 
 <h2>Cheatsheet Walkthrough</h2>
 
-<b>1. [netcraft.com](netcraft.com) - BROWSER</b>
-- <b>Shows alot of information</b>
-
-<b>2. [dnsdumpster.com](dnsdumpster.com) - BROWSER</b>
-- <b>Shows alot of information</b>
-
-<b>3. wafw00f - TERMINAL</b>
-
-- <b>***Use wafw00f to find web application firewall***</b>
-- <b>`wafw00f` zonetransfer.me</b>
-
-<b>4. Sublist3r - TERMINAL</b>
-- <b>***Find Subdomains of domain with sublist3r***</b>
-- <b>`subblist3r -d` zonetransfer.me</b>
-
-<b>5. theHarvester - TERMINAL</b>
-- <b>***Find domain email addresses***</b>
-- <b>`theHarvester -d` zonetransfer.me</b>
-
-<b>6. [haveibeenpwned.com](haveibeenpwned.com) - BROWSER</b>
-- <b>***Find leaked passwords for the identified emails***</b>
-
-<b></b>
-<b></b>
-<b></b>
-<b></b>
-<b></b>
-<b></b>
-<b></b>
-<b></b>
-<b></b>
 1. ***TERMINAL***
    **Automatic Zone Transfer to enumerate DNS records and subdomains:**
    - Using `dnsenum`:
